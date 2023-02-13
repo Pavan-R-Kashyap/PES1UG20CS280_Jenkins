@@ -26,10 +26,10 @@ pipeline {
     }
 
     post {
-        always {
-            if (currentBuild.result == 'FAILURE') {
+        failure {
+            
                 echo 'Pipeline Failed'
-            }
+          
         }
     }
 }
